@@ -23,21 +23,21 @@
     %titles and jazz
 
     %main
-    \node[shape=rectangle, draw=white, align=center] (Main) at (0,0) {
+    \node[shape=rectangle, draw=white, align=center, rounded corners, inner sep=12pt] (Main) at (0,0) {
         \huge $\displaystyle \sum_{n=1}^{\infty} a_n = \lim_{a}\sum_{n=1}^{a}$
     };
 
     %evalulate 
-    \node[shape=rectangle, draw=white] (EvalExc) at (0,-4) {\huge \textbf{Evaluate Exactly}};
+    \node[shape=rectangle, draw=white, align=center, anchor=north, rounded corners, inner sep=12pt](EvalExc) at (0,-3) {\huge \textbf{Evaluate Exactly}};
 
     %Converge or Diverge
-    \node[shape = rectangle, draw=white, align=center] (CorD) at (0,4){\huge \textbf{Converge/Diverge}};
+    \node[shape = rectangle, draw=white, align=center, anchor=south, rounded corners, inner sep=12pt] (CorD) at (0,3){\huge \textbf{Converge/Diverge}};
 
     %Comp tests
-    \node[shape = rectangle, draw=white, align=center, anchor=south] (CompT) at (11,8){\huge \textbf{Comparison Tests}};
+    \node[shape = rectangle, draw=white, align=center, anchor=south, rounded corners, inner sep=12pt] (CompT) at (12,7){\huge \textbf{Comparison Tests}};
 
     %Telescoping
-    \node[shape=rectangle, draw=white, align=center, anchor=north] (Tele) at (-6,-7) {
+    \node[shape=rectangle, draw=white, align=center, anchor=north, rounded corners, inner sep=12pt] (Tele) at (-6,-7) {
         \textbf{\huge Telescoping Series} \\[10pt]
         $\displaystyle \sum_{n=1}^{\infty} \frac{1}{n(n-1)}$ \\[10pt]
         A series where intermediate terms cancel, leaving a finite sum \\[5pt]
@@ -47,7 +47,7 @@
     };
 
     %Geometric
-    \node[shape=rectangle, draw=white, align=center, anchor=north] (Geom) at (6,-7) {
+    \node[shape=rectangle, draw=white, align=center, anchor=north, rounded corners, inner sep=12pt] (Geom) at (6,-7) {
         \textbf{\huge Geometric Series} \\[10pt]
         $\displaystyle \sum_{k=0}^{\infty} (r)^k = \frac{1}{1-r},$ $|r| < 1 $ \\[10pt] 
         or \\[10pt]
@@ -60,13 +60,13 @@
 
 
     %NTTFDO
-    \node[shape = rectangle, draw=white, align=center, anchor=south] (NTTFDO) at (0,8){\huge \textbf{$N^{th}$ test for divergnce (NTTFDO)} \\ [6pt] 
+    \node[shape = rectangle, draw=white, align=center, anchor=south, rounded corners, inner sep=12pt] (NTTFDO) at (0,8){\huge \textbf{$N^{th}$ test for divergnce (NTTFDO)} \\ [6pt] 
     $\lim_{n=\infty} a_n \neq 0$ \\
     then the series must diverge
     };
 
     %Integral Test
-    \node[shape = rectangle, draw=white, align=center, anchor=south] (IntTest) at (-12,8){\huge \textbf{Integral Test} \\ [10pt]
+    \node[shape = rectangle, draw=white, align=center, anchor=south, rounded corners, inner sep=12pt] (IntTest) at (-14,7){\huge \textbf{Integral Test} \\ [10pt]
     $\sum_{n=1}^{\infty} a_n$ converges if and only if $\int_1^\infty f(x) \, dx$ converges. \\ [8pt]
     and \\ [8pt]
     $\sum_{n=1}^{\infty} a_n$ diverges if and only if $\int_1^\infty f(x) \, dx$ diverges. \\ [15pt]
@@ -79,7 +79,7 @@
     };
 
     %p-series test
-    \node[shape = rectangle, draw=white, align=center] (PSes) at (-12,16){\huge \textbf{P-Series Test}\\ [10pt]
+    \node[shape = rectangle, draw=white, align=center, rounded corners, inner sep=12pt] (PSes) at (-14,16){\huge \textbf{P-Series Test}\\ [10pt]
     
     $\sum_{n=1}^{\infty} \frac{1}{x^p} \begin{cases} 
       Diverge & x\leq 1 \\
@@ -92,7 +92,7 @@
 
 
     %limit comp text
-    \node[shape = rectangle, draw=white, align=center, anchor=south] (LCT) at (23,8){
+    \node[shape = rectangle, draw=white, align=center, anchor=north, rounded corners, inner sep=12pt] (LCT) at (26,16){
     {\huge \textbf{Limit Comparison Test}} \\[10pt]
     $\lim_{ a = \infty} \frac{A_n}{B_n}$, Where $B_n$ is a series with known behavior\\ [10pt]
     If $\lim_{ a = \infty} \frac{A_n}{B_n}\neq 0$, then $B_n$ and $A_n$ must either both converge or diverge\\
@@ -102,7 +102,7 @@
     };
 
     %direct comp text
-    \node[shape = rectangle, draw=white, align=center] (DCT) at (11,14){
+    \node[shape = rectangle, draw=white, align=center, anchor=north, rounded corners, inner sep=12pt] (DCT) at (12,16){
     {\huge \textbf{Direct Comparison Test}}\\[10pt]
     If $B_n$ is a known series which converges and\\
     $A_n \leq B_n$\\

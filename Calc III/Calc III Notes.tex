@@ -20,14 +20,23 @@
 
 \begin{tikzpicture}
 
+    %titles and jazz
+
+    %main
     \node[shape=rectangle, draw=white, align=center] (Main) at (0,0) {
-        An indefinite series \\[10pt]
-        $\displaystyle \sum_{n=1}^{\infty} a_n = \lim_{a}\sum_{n=1}^{a}$
+        \huge $\displaystyle \sum_{n=1}^{\infty} a_n = \lim_{a}\sum_{n=1}^{a}$
     };
 
-    \node[shape=rectangle, draw=white] (EvalExc) at (0,-4) {Evaluate Exactly?};
+    %evalulate 
+    \node[shape=rectangle, draw=white] (EvalExc) at (0,-4) {\huge Evaluate Exactly};
 
+    %Converge or Diverge
+    \node[shape = rectangle, draw=white, align=center] (CorD) at (0,4){\huge Converge/Diverge};
 
+    %Comp tests
+    \node[shape = rectangle, draw=white, align=center] (CompT) at (10,8){\huge Comparison Tests};
+
+    %Telescoping
     \node[shape=rectangle, draw=white, align=center] (Tele) at (-6,-9) {
         \textbf{\huge Telescoping Series} \\[5pt]
         $\displaystyle \sum_{n=1}^{\infty} \frac{1}{n(n-1)}$ \\[5pt]
@@ -38,6 +47,8 @@
 
 
     };
+
+    %Geometric
     \node[shape=rectangle, draw=white, align=center] (Geom) at (6,-9) {
         \textbf{\huge Geometric Series} \\[5pt]
         $\displaystyle \sum_{k=0}^{\infty} (r)^k = \frac{1}{1-r},$ $|r| < 1 $ \\[5pt] 
@@ -49,14 +60,14 @@
     };
 
 
-    \node[shape = rectangle, draw=white, align=center] (CorD) at (0,4){Converge/Diverge};
 
-    \node[shape = rectangle, draw=white, align=center] (NTTFDO) at (0,8){ \large $N^{th}$ test for divergnce (NTTFDO) \\ [6pt] 
+    %NTTFDO
+    \node[shape = rectangle, draw=white, align=center] (NTTFDO) at (0,8){ \huge $N^{th}$ test for divergnce (NTTFDO) \\ [6pt] 
     $\lim_{n=\infty} a_n \neq 0$ \\
     then the series must diverge
     };
 
-
+    %Integral Test
     \node[shape = rectangle, draw=white, align=center] (IntTest) at (-12,10){\huge \textbf{Integral Test} \\ [10pt]
     $\sum_{n=1}^{\infty} a_n$ converges if and only if $\int_1^\infty f(x) \, dx$ converges. \\ [8pt]
     and \\ [8pt]
@@ -69,7 +80,8 @@
 
     };
 
-    \node[shape = rectangle, draw=white, align=center] (PSes) at (-12,20){\huge \textbf{P-Series Test}\\ [10pt]
+    %p-series test
+    \node[shape = rectangle, draw=white, align=center] (PSes) at (-12,16){\huge \textbf{P-Series Test}\\ [10pt]
     
     $\sum_{n=1}^{\infty} \frac{1}{x^p} \begin{cases} 
       Diverge & x\leq 1 \\
@@ -80,17 +92,26 @@
     };
 
 
-    \node[shape = rectangle, draw=white, align=center] (CompT) at (8,8){Comparison Tests
-    
-    };
 
-    \node[shape = rectangle, draw=white, align=center] (LCT) at (8,12){
+
+    \node[shape = rectangle, draw=white, align=center] (LCT) at (20,8){
     {\huge \textbf{Limit Comparison Test}} \\[10pt]
-    $\lim_{ a = \infty} \frac{A_n}{B_n} $
+    $\lim_{ a = \infty} \frac{A_n}{B_n}$, Where $B_n$ is a series with known behavior\\ [10pt]
+    If $\lim_{ a = \infty} \frac{A_n}{B_n}\neq 0$, then $B_n$ and $A_n$ must either both converge or diverge\\
+    If $\lim_{ a = \infty} \frac{A_n}{B_n} = 0$ and $B_n$ is a convergent series, then $A_N$ must also converge\\
+    If $\lim_{ a = \infty} \frac{A_n}{B_n}$ diverges and $B_n$ is a divergent series, then $A_N$ must diverge\\
+
     };
 
-    \node[shape = rectangle, draw=white, align=center] (DCT) at (16,12){Direct Comparison Test
-    
+    \node[shape = rectangle, draw=white, align=center] (DCT) at (10,14){
+    {\huge \textbf{Direct Comparison Test}}\\[10pt]
+    If $B_n$ is a known series which converges and\\
+    $A_n \leq B_n$\\
+    then $A_n$ must also converge\\[10pt]
+
+    If $B_n$ is a known series which diverges and\\
+    $A_n \geq B_n$\\
+    then $A_n$ must also diverge
     };
 
 

@@ -1,6 +1,6 @@
-PWD c:\Users\piers\OneDrive\Desktop\cod stuff\Notes
+PWD c:\Users\piers\OneDrive\Desktop\cod stuff\Notes\Calc III
 INPUT C:\Users\piers\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\piers\OneDrive\Desktop\cod stuff\Notes\Calc III Notes.tex
+INPUT c:\Users\piers\OneDrive\Desktop\cod stuff\Notes\Calc III\Calc III Notes.tex
 OUTPUT Calc III Notes.log
 INPUT C:\Program Files\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Program Files\MiKTeX\tex\latex\base\article.cls

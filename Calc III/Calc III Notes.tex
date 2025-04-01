@@ -10,7 +10,7 @@
 \usepackage{amsmath}
 
 
-\geometry{paperwidth=20in, paperheight=20in}
+\geometry{paperwidth=25in, paperheight=20in}
 
 \title{Calc III notes}
 \author{Pierson Lipschultz}
@@ -28,32 +28,30 @@
     };
 
     %evalulate 
-    \node[shape=rectangle, draw=white] (EvalExc) at (0,-4) {\huge Evaluate Exactly};
+    \node[shape=rectangle, draw=white] (EvalExc) at (0,-4) {\huge \textbf{Evaluate Exactly}};
 
     %Converge or Diverge
-    \node[shape = rectangle, draw=white, align=center] (CorD) at (0,4){\huge Converge/Diverge};
+    \node[shape = rectangle, draw=white, align=center] (CorD) at (0,4){\huge \textbf{Converge/Diverge}};
 
     %Comp tests
-    \node[shape = rectangle, draw=white, align=center] (CompT) at (10,8){\huge Comparison Tests};
+    \node[shape = rectangle, draw=white, align=center, anchor=south] (CompT) at (11,8){\huge \textbf{Comparison Tests}};
 
     %Telescoping
-    \node[shape=rectangle, draw=white, align=center] (Tele) at (-6,-9) {
-        \textbf{\huge Telescoping Series} \\[5pt]
-        $\displaystyle \sum_{n=1}^{\infty} \frac{1}{n(n-1)}$ \\[5pt]
+    \node[shape=rectangle, draw=white, align=center, anchor=north] (Tele) at (-6,-7) {
+        \textbf{\huge Telescoping Series} \\[10pt]
+        $\displaystyle \sum_{n=1}^{\infty} \frac{1}{n(n-1)}$ \\[10pt]
         A series where intermediate terms cancel, leaving a finite sum \\[5pt]
         - Partial Fraction Decomposition  \\[5pt]
         - Find Equation for $S_n$ \\[5pt]
         - $\lim_{n \to \infty}$ $S_n$
-
-
     };
 
     %Geometric
-    \node[shape=rectangle, draw=white, align=center] (Geom) at (6,-9) {
-        \textbf{\huge Geometric Series} \\[5pt]
-        $\displaystyle \sum_{k=0}^{\infty} (r)^k = \frac{1}{1-r},$ $|r| < 1 $ \\[5pt] 
-        or \\
-        $\displaystyle \sum_{k=N}^{\infty} r^N = \frac{r^N}{1-r}, $ $|r| < 1 $\\[5pt]
+    \node[shape=rectangle, draw=white, align=center, anchor=north] (Geom) at (6,-7) {
+        \textbf{\huge Geometric Series} \\[10pt]
+        $\displaystyle \sum_{k=0}^{\infty} (r)^k = \frac{1}{1-r},$ $|r| < 1 $ \\[10pt] 
+        or \\[10pt]
+        $\displaystyle \sum_{k=N}^{\infty} r^N = \frac{r^N}{1-r}, $ $|r| < 1 $\\[10pt]
         A series which increases by the same amount for each value of N. Ie. \\
         $\frac{A_{n+1}}{A_n} = L$, where L is a number \\ 
         Note: This does not converge for values of r greater than 1  \\
@@ -62,13 +60,13 @@
 
 
     %NTTFDO
-    \node[shape = rectangle, draw=white, align=center] (NTTFDO) at (0,8){ \huge $N^{th}$ test for divergnce (NTTFDO) \\ [6pt] 
+    \node[shape = rectangle, draw=white, align=center, anchor=south] (NTTFDO) at (0,8){\huge \textbf{$N^{th}$ test for divergnce (NTTFDO)} \\ [6pt] 
     $\lim_{n=\infty} a_n \neq 0$ \\
     then the series must diverge
     };
 
     %Integral Test
-    \node[shape = rectangle, draw=white, align=center] (IntTest) at (-12,10){\huge \textbf{Integral Test} \\ [10pt]
+    \node[shape = rectangle, draw=white, align=center, anchor=south] (IntTest) at (-12,8){\huge \textbf{Integral Test} \\ [10pt]
     $\sum_{n=1}^{\infty} a_n$ converges if and only if $\int_1^\infty f(x) \, dx$ converges. \\ [8pt]
     and \\ [8pt]
     $\sum_{n=1}^{\infty} a_n$ diverges if and only if $\int_1^\infty f(x) \, dx$ diverges. \\ [15pt]
@@ -93,8 +91,8 @@
 
 
 
-
-    \node[shape = rectangle, draw=white, align=center] (LCT) at (20,8){
+    %limit comp text
+    \node[shape = rectangle, draw=white, align=center, anchor=south] (LCT) at (23,8){
     {\huge \textbf{Limit Comparison Test}} \\[10pt]
     $\lim_{ a = \infty} \frac{A_n}{B_n}$, Where $B_n$ is a series with known behavior\\ [10pt]
     If $\lim_{ a = \infty} \frac{A_n}{B_n}\neq 0$, then $B_n$ and $A_n$ must either both converge or diverge\\
@@ -103,7 +101,8 @@
 
     };
 
-    \node[shape = rectangle, draw=white, align=center] (DCT) at (10,14){
+    %direct comp text
+    \node[shape = rectangle, draw=white, align=center] (DCT) at (11,14){
     {\huge \textbf{Direct Comparison Test}}\\[10pt]
     If $B_n$ is a known series which converges and\\
     $A_n \leq B_n$\\

@@ -3,128 +3,151 @@
 
 \usepackage{darkmode}
 \usepackage{tikz}
-\enabledarkmode 
 
 \usepackage{geometry}
 
 \usepackage{amsmath}
 
 
-\geometry{paperwidth=25in, paperheight=20in}
-
-\title{Calc III notes}
+\title{Calc II notes}
 \author{Pierson Lipschultz}
 \date{March 2025}
 
 \begin{document}
 
-\begin{tikzpicture}
-
-    %titles and jazz
-
-    %main
-    \node[shape=rectangle, draw=white, align=center, rounded corners, inner sep=12pt] (Main) at (0,0) {
-        \huge $\displaystyle \sum_{n=1}^{\infty} a_n = \lim_{a}\sum_{n=1}^{a}$
-    };
-
-    %evalulate 
-    \node[shape=rectangle, draw=white, align=center, anchor=north, rounded corners, inner sep=12pt](EvalExc) at (0,-3) {\huge \textbf{Evaluate Exactly}};
-
-    %Converge or Diverge
-    \node[shape = rectangle, draw=white, align=center, anchor=south, rounded corners, inner sep=12pt] (CorD) at (0,3){\huge \textbf{Converge/Diverge}};
-
-    %Comp tests
-    \node[shape = rectangle, draw=white, align=center, anchor=south, rounded corners, inner sep=12pt] (CompT) at (12,7){\huge \textbf{Comparison Tests}};
-
-    %Telescoping
-    \node[shape=rectangle, draw=white, align=center, anchor=north, rounded corners, inner sep=12pt] (Tele) at (-6,-7) {
-        \textbf{\huge Telescoping Series} \\[10pt]
-        $\displaystyle \sum_{n=1}^{\infty} \frac{1}{n(n-1)}$ \\[10pt]
-        A series where intermediate terms cancel, leaving a finite sum \\[5pt]
-        - Partial Fraction Decomposition  \\[5pt]
-        - Find Equation for $S_n$ \\[5pt]
-        - $\lim_{n \to \infty}$ $S_n$
-    };
-
-    %Geometric
-    \node[shape=rectangle, draw=white, align=center, anchor=north, rounded corners, inner sep=12pt] (Geom) at (6,-7) {
-        \textbf{\huge Geometric Series} \\[10pt]
-        $\displaystyle \sum_{k=0}^{\infty} (r)^k = \frac{1}{1-r},$ $|r| < 1 $ \\[10pt] 
-        or \\[10pt]
-        $\displaystyle \sum_{k=N}^{\infty} r^N = \frac{r^N}{1-r}, $ $|r| < 1 $\\[10pt]
-        A series which increases by the same amount for each value of N. Ie. \\
-        $\frac{A_{n+1}}{A_n} = L$, where L is a number \\ 
-        Note: This does not converge for values of r greater than 1  \\
-    };
 
 
+\vspace*{\fill}
+\begingroup
+\begin{center}
+    \huge
+    Calc II Notes
 
-    %NTTFDO
-    \node[shape = rectangle, draw=white, align=center, anchor=south, rounded corners, inner sep=12pt] (NTTFDO) at (0,8){\huge \textbf{$N^{th}$ test for divergnce (NTTFDO)} \\ [6pt] 
-    $\lim_{n=\infty} a_n \neq 0$ \\
-    then the series must diverge
-    };
-
-    %Integral Test
-    \node[shape = rectangle, draw=white, align=center, anchor=south, rounded corners, inner sep=12pt] (IntTest) at (-14,7){\huge \textbf{Integral Test} \\ [10pt]
-    $\sum_{n=1}^{\infty} a_n$ converges if and only if $\int_1^\infty f(x) \, dx$ converges. \\ [8pt]
-    and \\ [8pt]
-    $\sum_{n=1}^{\infty} a_n$ diverges if and only if $\int_1^\infty f(x) \, dx$ diverges. \\ [15pt]
-
-    \textbf{Conditions for the Integral Test} \\ [6pt]
-    I) Must be continous for all values of x\\
-    II) Must be positive\\
-    III) Must be decreasing \\ 
-
-    };
-
-    %p-series test
-    \node[shape = rectangle, draw=white, align=center, rounded corners, inner sep=12pt] (PSes) at (-14,16){\huge \textbf{P-Series Test}\\ [10pt]
+    Pierson L
     
-    $\sum_{n=1}^{\infty} \frac{1}{x^p} \begin{cases} 
-      Diverge & x\leq 1 \\
-      Converge & 1 > 1 \\ 
-    \end{cases}$ \\ [10pt]
-    
-    \textit{By the integral test} 
-    };
+\end{center}
+
+\endgroup
+\vspace*{\fill}
+
+\pagebreak
+
+\vspace*{\fill}
+\begingroup
+
+    \resizebox{\textwidth}{!}{
+        \centering
+        \begin{tikzpicture}
+
+            %titles and jazz
+
+            %main
+            \node[shape=rectangle, draw=black, align=center, rounded corners, inner sep=12pt] (Main) at (0,0) {
+                \huge $\displaystyle \sum_{n=1}^{\infty} a_n = \lim_{a}\sum_{n=1}^{a}$
+            };
+
+            %evalulate 
+            \node[shape=rectangle, draw=black, align=center, anchor=north, rounded corners, inner sep=12pt](EvalExc) at (0,-3) {\huge \textbf{Evaluate Exactly}};
+
+            %Converge or Diverge
+            \node[shape = rectangle, draw=black, align=center, anchor=south, rounded corners, inner sep=12pt] (CorD) at (0,3){\huge \textbf{Converge/Diverge}};
+
+            %Comp tests
+            \node[shape = rectangle, draw=black, align=center, anchor=south, rounded corners, inner sep=12pt] (CompT) at (12,7){\huge \textbf{Comparison Tests}};
+
+            %Telescoping
+            \node[shape=rectangle, draw=black, align=center, anchor=north, rounded corners, inner sep=12pt] (Tele) at (-6,-7) {
+                \textbf{\huge Telescoping Series} \\[10pt]
+                $\displaystyle \sum_{n=1}^{\infty} \frac{1}{n(n-1)}$ \\[10pt]
+                A series where intermediate terms cancel, leaving a finite sum \\[5pt]
+                - Partial Fraction Decomposition  \\[5pt]
+                - Find Equation for $S_n$ \\[5pt]
+                - $\lim_{n \to \infty}$ $S_n$
+            };
+
+            %Geometric
+            \node[shape=rectangle, draw=black, align=center, anchor=north, rounded corners, inner sep=12pt] (Geom) at (6,-7) {
+                \textbf{\huge Geometric Series} \\[10pt]
+                $\displaystyle \sum_{k=0}^{\infty} (r)^k = \frac{1}{1-r},$ $|r| < 1 $ \\[10pt] 
+                or \\[10pt]
+                $\displaystyle \sum_{k=N}^{\infty} r^N = \frac{r^N}{1-r}, $ $|r| < 1 $\\[10pt]
+                A series which increases by the same amount for each value of N. Ie. \\
+                $\frac{A_{n+1}}{A_n} = L$, where L is a number \\ 
+                Note: This does not converge for values of r greater than 1  \\
+            };
 
 
 
-    %limit comp text
-    \node[shape = rectangle, draw=white, align=center, anchor=north, rounded corners, inner sep=12pt] (LCT) at (26,16){
-    {\huge \textbf{Limit Comparison Test}} \\[10pt]
-    $\lim_{ a = \infty} \frac{A_n}{B_n}$, Where $B_n$ is a series with known behavior\\ [10pt]
-    If $\lim_{ a = \infty} \frac{A_n}{B_n}\neq 0$, then $B_n$ and $A_n$ must either both converge or diverge\\
-    If $\lim_{ a = \infty} \frac{A_n}{B_n} = 0$ and $B_n$ is a convergent series, then $A_N$ must also converge\\
-    If $\lim_{ a = \infty} \frac{A_n}{B_n}$ diverges and $B_n$ is a divergent series, then $A_N$ must diverge\\
+            %NTTFDO
+            \node[shape = rectangle, draw=black, align=center, anchor=south, rounded corners, inner sep=12pt] (NTTFDO) at (0,8){\huge \textbf{$N^{th}$ test for divergnce (NTTFDO)} \\ [6pt] 
+            $\lim_{n=\infty} a_n \neq 0$ \\
+            then the series must diverge
+            };
 
-    };
+            %Integral Test
+            \node[shape = rectangle, draw=black, align=center, anchor=south, rounded corners, inner sep=12pt] (IntTest) at (-14,7){\huge \textbf{Integral Test} \\ [10pt]
+            $\sum_{n=1}^{\infty} a_n$ converges if and only if $\int_1^\infty f(x) \, dx$ converges. \\ [8pt]
+            and \\ [8pt]
+            $\sum_{n=1}^{\infty} a_n$ diverges if and only if $\int_1^\infty f(x) \, dx$ diverges. \\ [15pt]
 
-    %direct comp text
-    \node[shape = rectangle, draw=white, align=center, anchor=north, rounded corners, inner sep=12pt] (DCT) at (12,16){
-    {\huge \textbf{Direct Comparison Test}}\\[10pt]
-    If $B_n$ is a known series which converges and\\
-    $A_n \leq B_n$\\
-    then $A_n$ must also converge\\[10pt]
+            \textbf{Conditions for the Integral Test} \\ [6pt]
+            I) Must be continous for all values of x\\
+            II) Must be positive\\
+            III) Must be decreasing \\ 
 
-    If $B_n$ is a known series which diverges and\\
-    $A_n \geq B_n$\\
-    then $A_n$ must also diverge
-    };
+            };
+
+            %p-series test
+            \node[shape = rectangle, draw=black, align=center, rounded corners, inner sep=12pt] (PSes) at (-14,16){\huge \textbf{P-Series Test}\\ [10pt]
+            
+            $\sum_{n=1}^{\infty} \frac{1}{x^p} \begin{cases} 
+            Diverge & x\leq 1 \\
+            Converge & 1 > 1 \\ 
+            \end{cases}$ \\ [10pt]
+            
+            \textit{By the integral test} 
+            };
 
 
-    \path [-] (Main) edge node[left] {$$} (EvalExc);
-    \path [-] (EvalExc) edge node[left] {$$} (Tele);
-    \path [-] (EvalExc) edge node[left] {$$} (Geom);
-    \path [-] (Main) edge node[left] {$$} (CorD);
-    \path [-] (CorD) edge node[left] {$$} (NTTFDO);
-    \path [-] (CorD) edge node[left] {$$} (IntTest);
-        \path [-] (IntTest) edge node[left] {$$} (PSes);
-    \path [-] (CorD) edge node[left] {$$} (CompT);
-        \path [-] (CompT) edge node[left] {$$} (LCT);
-        \path [-] (CompT) edge node[left] {$$} (DCT);
 
-\end{tikzpicture}
+            %limit comp text
+            \node[shape = rectangle, draw=black, align=center, anchor=north, rounded corners, inner sep=12pt] (LCT) at (12,4){
+            {\huge \textbf{Limit Comparison Test}} \\[10pt]
+            $\lim_{ a = \infty} \frac{A_n}{B_n}$, Where $B_n$ is a series with known behavior\\ [10pt]
+            If $\lim_{ a = \infty} \frac{A_n}{B_n}\neq 0$, then $B_n$ and $A_n$ must either both converge or diverge\\
+            If $\lim_{ a = \infty} \frac{A_n}{B_n} = 0$ and $B_n$ is a convergent series, then $A_N$ must also converge\\
+            If $\lim_{ a = \infty} \frac{A_n}{B_n}$ diverges and $B_n$ is a divergent series, then $A_N$ must diverge\\
+
+            };
+
+            %direct comp text
+            \node[shape = rectangle, draw=black, align=center, anchor=north, rounded corners, inner sep=12pt] (DCT) at (12,16){
+            {\huge \textbf{Direct Comparison Test}}\\[10pt]
+            If $B_n$ is a known series which converges and\\
+            $A_n \leq B_n$\\
+            then $A_n$ must also converge\\[10pt]
+
+            If $B_n$ is a known series which diverges and\\
+            $A_n \geq B_n$\\
+            then $A_n$ must also diverge
+            };
+
+
+            \path [-] (Main) edge node[left] {$$} (EvalExc);
+            \path [-] (EvalExc) edge node[left] {$$} (Tele);
+            \path [-] (EvalExc) edge node[left] {$$} (Geom);
+            \path [-] (Main) edge node[left] {$$} (CorD);
+            \path [-] (CorD) edge node[left] {$$} (NTTFDO);
+            \path [-] (CorD) edge node[left] {$$} (IntTest);
+                \path [-] (IntTest) edge node[left] {$$} (PSes);
+            \path [-] (CorD) edge node[left] {$$} (CompT);
+                \path [-] (CompT) edge node[left] {$$} (LCT);
+                \path [-] (CompT) edge node[left] {$$} (DCT);
+
+        \end{tikzpicture}
+    }
+
+\endgroup
+\vspace*{\fill}
 
 \end{document}

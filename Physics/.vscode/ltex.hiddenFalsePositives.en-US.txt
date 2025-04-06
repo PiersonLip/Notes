@@ -1,0 +1,1 @@
+{"rule":"NUMBERS_IN_WORDS","sentence":"^\\Q\\E(?:Dummy|Ina|Jimmy-|Dummy-|Maniquí-|Maniquíes-)[0-9]+\\Qcm \\E(?:Dummy|Ina|Jimmy-|Dummy-|Maniquí-|Maniquíes-)[0-9]+$"}

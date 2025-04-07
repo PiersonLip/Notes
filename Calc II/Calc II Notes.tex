@@ -8,6 +8,10 @@
 
 \usepackage{amsmath}
 
+\sloppy
+% \enabledarkmode
+
+\colorlet{boxfillcolor}{gray!10}
 
 \title{Calc II notes}
 \author{Pierson Lipschultz}
@@ -43,7 +47,7 @@
 
             %main
             \node[shape=rectangle, draw=black, align=center, rounded corners, inner sep=12pt] (Main) at (0,0) {
-                \huge $\displaystyle \sum_{n=1}^{\infty} a_n = \lim_{a}\sum_{n=1}^{a}$
+                \huge $\displaystyle \sum_{n=1}^{\infty} a_n = \lim_{a \rightarrow \infty}\sum_{n=1}^{a} a_n$
             };
 
             %evalulate 
@@ -51,9 +55,64 @@
 
             %Converge or Diverge
             \node[shape = rectangle, draw=black, align=center, anchor=south, rounded corners, inner sep=12pt] (CorD) at (0,3){\huge \textbf{Converge/Diverge}};
-
+            
+            %NTTFDO
+            \node[shape = rectangle, draw=black, align=center, anchor=south, rounded corners, inner sep=12pt] (NTTFDO) at (12,-4){\huge \textbf{$N^{th}$ test for divergnce (NTTFDO)} \\ [6pt] 
+            $\lim_{n=\infty} a_n \neq 0$ \\
+            then the series must diverge
+            };
+            
             %Comp tests
-            \node[shape = rectangle, draw=black, align=center, anchor=south, rounded corners, inner sep=12pt] (CompT) at (12,7){\huge \textbf{Comparison Tests}};
+            \node[shape = rectangle, draw=black, align=center, anchor=south, rounded corners, inner sep=12pt] (CompT) at (0,7){\huge \textbf{Comparison Tests}};
+
+            %limit comp text
+            \node[shape = rectangle, draw=black, align=center, anchor=north, rounded corners, inner sep=12pt] (LCT) at (-12,13){
+                {\huge \textbf{Limit Comparison Test}} \\[10pt]
+                $\lim_{ a = \infty} \frac{A_n}{B_n}$, Where $B_n$ is a series with known behavior\\ [10pt]
+                If $\lim_{ a = \infty} \frac{A_n}{B_n}\neq 0$, then $B_n$ and $A_n$ must either both converge or diverge\\
+                If $\lim_{ a = \infty} \frac{A_n}{B_n} = 0$ and $B_n$ is a convergent series, then $A_N$ must also converge\\
+                If $\lim_{ a = \infty} \frac{A_n}{B_n}$ diverges and $B_n$ is a divergent series, then $A_N$ must diverge\\
+
+            };
+
+            %direct comp text
+            \node[shape = rectangle, draw=black, align=center, anchor=north, rounded corners, inner sep=12pt] (DCT) at (12,5){
+                {\huge \textbf{Direct Comparison Test}}\\[10pt]
+                If $B_n$ is a known series which converges and\\
+                $A_n \leq B_n$\\
+                then $A_n$ must also converge\\[10pt]
+
+                If $B_n$ is a known series which diverges and\\
+                $A_n \geq B_n$\\
+                then $A_n$ must also diverge
+            };
+
+            %Absolute convergence 
+            \node[shape = rectangle, draw=black, align=center, anchor=south, rounded corners, inner sep=12pt] (ABSConvg) at (0,11){
+                {\huge \textbf{Absolute Convergence}}
+                };
+                
+            %Ratio Test
+            \node[shape = rectangle, draw=black, align=center, anchor=south, rounded corners, inner sep=12pt] (RatioTest) at (12,15){
+                {\huge \textbf{Ratio Test}}\\[10pt]
+                Suppose that $\displaystyle \sum_{n=1}^{\infty} a_n$ is \textit{\textbf{any}} series,\\
+                and that\\[5pt]
+                $\displaystyle \lim_{n \rightarrow \infty} \left| \frac{a_{n+1}}{a_n} \right| = r$\\[10pt]
+                Then: \\[5pt]
+                The series converges absolutely if $r < 1$\\
+                The series diverges if $r > 1$
+                };
+
+            %Root Test
+            \node[shape = rectangle, draw=black, align=center, anchor=south, rounded corners, inner sep=12pt] (RootTest) at (12,7){
+                {\huge \textbf{Root Test}}\\[10pt]
+                Suppose that $\displaystyle \sum_{n=1}^{\infty} a_n$ is \textit{any} series,\\
+                and that\\[5pt]
+                $\displaystyle \lim_{n \rightarrow \infty} ({|a_n|})^\frac{1}{n} = L$\\[10pt]
+                Then: \\[5pt]
+                The series converges absolutely if $L < 1$\\
+                The series diverges if $L > 1$
+                };
 
             %Telescoping
             \node[shape=rectangle, draw=black, align=center, anchor=north, rounded corners, inner sep=12pt] (Tele) at (-6,-7) {
@@ -76,19 +135,11 @@
                 Note: This does not converge for values of r greater than 1  \\
             };
 
-
-
-            %NTTFDO
-            \node[shape = rectangle, draw=black, align=center, anchor=south, rounded corners, inner sep=12pt] (NTTFDO) at (0,8){\huge \textbf{$N^{th}$ test for divergnce (NTTFDO)} \\ [6pt] 
-            $\lim_{n=\infty} a_n \neq 0$ \\
-            then the series must diverge
-            };
-
             %Integral Test
-            \node[shape = rectangle, draw=black, align=center, anchor=south, rounded corners, inner sep=12pt] (IntTest) at (-14,7){\huge \textbf{Integral Test} \\ [10pt]
-            $\sum_{n=1}^{\infty} a_n$ converges if and only if $\int_1^\infty f(x) \, dx$ converges. \\ [8pt]
+            \node[shape = rectangle, draw=black, align=center, anchor=south, rounded corners, inner sep=12pt] (IntTest) at (-12,-5){\huge \textbf{Integral Test} \\ [10pt]
+            $\displaystyle \sum_{n=1}^{\infty} a_n$ converges if and only if $\int_1^\infty f(x) \, dx$ converges. \\ [8pt]
             and \\ [8pt]
-            $\sum_{n=1}^{\infty} a_n$ diverges if and only if $\int_1^\infty f(x) \, dx$ diverges. \\ [15pt]
+            $\displaystyle \sum_{n=1}^{\infty} a_n$ diverges if and only if $\int_1^\infty f(x) \, dx$ diverges. \\ [15pt]
 
             \textbf{Conditions for the Integral Test} \\ [6pt]
             I) Must be continous for all values of x\\
@@ -98,39 +149,17 @@
             };
 
             %p-series test
-            \node[shape = rectangle, draw=black, align=center, rounded corners, inner sep=12pt] (PSes) at (-14,16){\huge \textbf{P-Series Test}\\ [10pt]
+            \node[shape = rectangle, draw=black, align=center, rounded corners, inner sep=12pt] (PSes) at (-12,5){\huge \textbf{P-Series Test}\\ [10pt]
             
-            $\sum_{n=1}^{\infty} \frac{1}{x^p} \begin{cases} 
-            Diverge & x\leq 1 \\
-            Converge & 1 > 1 \\ 
+            $\displaystyle \sum_{n=1}^{\infty} \frac{1}{x^p} \begin{cases} 
+            Converge & x\leq 1 \\
+            Diverge & 1 > 1 \\ 
             \end{cases}$ \\ [10pt]
             
             \textit{By the integral test} 
             };
 
 
-
-            %limit comp text
-            \node[shape = rectangle, draw=black, align=center, anchor=north, rounded corners, inner sep=12pt] (LCT) at (12,4){
-            {\huge \textbf{Limit Comparison Test}} \\[10pt]
-            $\lim_{ a = \infty} \frac{A_n}{B_n}$, Where $B_n$ is a series with known behavior\\ [10pt]
-            If $\lim_{ a = \infty} \frac{A_n}{B_n}\neq 0$, then $B_n$ and $A_n$ must either both converge or diverge\\
-            If $\lim_{ a = \infty} \frac{A_n}{B_n} = 0$ and $B_n$ is a convergent series, then $A_N$ must also converge\\
-            If $\lim_{ a = \infty} \frac{A_n}{B_n}$ diverges and $B_n$ is a divergent series, then $A_N$ must diverge\\
-
-            };
-
-            %direct comp text
-            \node[shape = rectangle, draw=black, align=center, anchor=north, rounded corners, inner sep=12pt] (DCT) at (12,16){
-            {\huge \textbf{Direct Comparison Test}}\\[10pt]
-            If $B_n$ is a known series which converges and\\
-            $A_n \leq B_n$\\
-            then $A_n$ must also converge\\[10pt]
-
-            If $B_n$ is a known series which diverges and\\
-            $A_n \geq B_n$\\
-            then $A_n$ must also diverge
-            };
 
 
             \path [-] (Main) edge node[left] {$$} (EvalExc);
@@ -143,6 +172,11 @@
             \path [-] (CorD) edge node[left] {$$} (CompT);
                 \path [-] (CompT) edge node[left] {$$} (LCT);
                 \path [-] (CompT) edge node[left] {$$} (DCT);
+                \path [-] (CompT) edge node[left] {$$} (ABSConvg);
+                    \path [-] (ABSConvg) edge node[left] {$$} (RatioTest); 
+                    \path [-] (ABSConvg) edge node[left] {$$} (RootTest); 
+
+
 
         \end{tikzpicture}
     }
@@ -150,4 +184,79 @@
 \endgroup
 \vspace*{\fill}
 
+\pagebreak
+\title{Absolute Convergence}
+    \section{Ratio Test} 
+    \hrulefill \\[10pt]
+
+    The Ratio Test\footnote{Very important regarding factorials} states that 
+        
+        \begingroup
+        \centering
+        Suppose that $\displaystyle \sum_{n=1}^{\infty} a_n$ is \textit{\textbf{any}} series,\\
+        and that\\[5pt]
+        $\displaystyle \lim_{n \rightarrow \infty} \left| \frac{a_{n+1}}{a_n} \right| = r$\\[10pt]
+        Then: \\[5pt]
+        The series converges absolutely if $r < 1$\\
+        The series diverges if $r > 1$\\
+        \endgroup
+
+    \subsection{Examples}
+
+        \begingroup
+        \centering
+
+        \fbox{\large \textbf{ex. 1}}\\
+
+        \hrulefill \\[10pt]
+
+        \fbox{\large Simplify $\frac{(n+2)!}{(n-1)!}$}\\[5pt]
+        \textit{Ratio of factorials}\\[15pt]
+
+        $=\frac{(n+2)!}{(n-1)!}$\\[15pt]
+        
+        $= \frac{(n+1)(n+1)(n)(n-1)\cdots(1)}{(n-1)(n-2)(n-3)\cdots(1)}$\\[15pt]
+        
+        $= \frac{(n+1)(n+1)(n)(n-1)}{(n-1)}$\\[15pt]
+
+        $= {(n+1)(n+1)(n)}$\\[15pt]
+
+        \endgroup
+    \pagebreak
+
+
+
+\title{Misc}
+    \centering
+    \subsection{\huge Factorials}
+    \fbox{\large ex.1}
+
+        \hrulefill \\[10pt]
+
+            \fbox{\large 4! = 4 x 3! = 4x3x2! = 4x3x2x1! = 4x3x2x1x0!}
+
+            $\rightarrow$
+
+            \fbox{0! = 1}
+
+            $\rightarrow$
+
+            \fbox{4!= 24}
+
+            \hrulefill \\[10pt]
+
+    \fbox{\large \textbf{ex. 2}}\\
+
+    \hrulefill \\[10pt]
+
+    \fbox{\large Simplify $\frac{(n+2)!}{(n-1)!}$}\\[5pt]
+    \textit{Ratio of factorials}\\[15pt]
+
+    $=\frac{(n+2)!}{(n-1)!}$\\[15pt]
+    
+    $= \frac{(n+1)(n+1)(n)(n-1)\cdots(1)}{(n-1)(n-2)(n-3)\cdots(1)}$\\[15pt]
+    
+    $= \frac{(n+1)(n+1)(n)(n-1)}{(n-1)}$\\[15pt]
+
+    $= {(n+1)(n+1)(n)}$\\[15pt]
 \end{document}

@@ -1,4 +1,5 @@
 \documentclass{article}
+
 \usepackage{graphicx} % Required for inserting images
 
 \usepackage{darkmode}
@@ -8,7 +9,7 @@
 
 \usepackage{amsmath}
 
-\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+% \newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
 
 \sloppy
 % \enabledarkmode
@@ -41,7 +42,8 @@
 \vspace*{\fill}
 \begingroup
 
-    \resizebox{\textwidth}{!}{
+    \resizebox{\textwidth}{!}{%
+
         \centering
         \begin{tikzpicture}
 
@@ -59,8 +61,8 @@
             \node[shape = rectangle, draw=black, align=center, anchor=south, rounded corners, inner sep=12pt] (CorD) at (0,3){\huge \textbf{Converge/Diverge}};
             
             %NTTFDO
-            \node[shape = rectangle, draw=black, align=center, anchor=south, rounded corners, inner sep=12pt] (NTTFDO) at (12,-4){\huge \textbf{$N^{th}$ test for divergnce (NTTFDO)} \\ [6pt] 
-            $\lim_{n=\infty} a_n \neq 0$ \\
+            \node[shape = rectangle, draw=black, align=center, anchor=south, rounded corners, inner sep=12pt] (NTTFDO) at (12,1){\huge \textbf{$N^{th}$ test for divergnce (NTTFDO)} \\ [6pt] 
+            $\lim_{n \rightarrow \infty} a_n \neq 0$ \\
             then the series must diverge
             };
             
@@ -78,7 +80,7 @@
             };
 
             %direct comp text
-            \node[shape = rectangle, draw=black, align=center, anchor=north, rounded corners, inner sep=12pt] (DCT) at (12,5){
+            \node[shape = rectangle, draw=black, align=center, anchor=north, rounded corners, inner sep=12pt] (DCT) at (12,10){
                 {\huge \textbf{Direct Comparison Test}}\\[10pt]
                 If $B_n$ is a known series which converges and\\
                 $A_n \leq B_n$\\
@@ -95,7 +97,7 @@
                 };
                 
             %Ratio Test
-            \node[shape = rectangle, draw=black, align=center, anchor=south, rounded corners, inner sep=12pt] (RatioTest) at (12,15){
+            \node[shape = rectangle, draw=black, align=center, anchor=south, rounded corners, inner sep=12pt] (RatioTest) at (0,15){
                 {\huge \textbf{Ratio Test}}\\[10pt]
                 Suppose that $\displaystyle \sum_{n=1}^{\infty} a_n$ is \textit{\textbf{any}} series,\\
                 and that\\[5pt]
@@ -106,7 +108,7 @@
                 };
 
             %Root Test
-            \node[shape = rectangle, draw=black, align=center, anchor=south, rounded corners, inner sep=12pt] (RootTest) at (12,7){
+            \node[shape = rectangle, draw=black, align=center, anchor=south, rounded corners, inner sep=12pt] (RootTest) at (12,12){
                 {\huge \textbf{Root Test}}\\[10pt]
                 Suppose that $\displaystyle \sum_{n=1}^{\infty} a_n$ is \textit{any} series,\\
                 and that\\[5pt]
@@ -117,7 +119,7 @@
                 };
 
             %Telescoping
-            \node[shape=rectangle, draw=black, align=center, anchor=north, rounded corners, inner sep=12pt] (Tele) at (-6,-7) {
+            \node[shape=rectangle, draw=black, align=center, anchor=north, rounded corners, inner sep=12pt] (Tele) at (0,-7) {
                 \textbf{\huge Telescoping Series} \\[10pt]
                 $\displaystyle \sum_{n=1}^{\infty} \frac{1}{n(n-1)}$ \\[10pt]
                 A series where intermediate terms cancel, leaving a finite sum \\[5pt]
@@ -127,14 +129,15 @@
             };
 
             %Geometric
-            \node[shape=rectangle, draw=black, align=center, anchor=north, rounded corners, inner sep=12pt] (Geom) at (6,-7) {
+            \node[shape=rectangle, draw=black, align=center, anchor=south, rounded corners, inner sep=12pt] (Geom) at (12,-7.3) {
                 \textbf{\huge Geometric Series} \\[10pt]
-                $\displaystyle \sum_{k=0}^{\infty} (r)^k = \frac{1}{1-r},$ $|r| < 1 $ \\[10pt] 
+                $\displaystyle \sum_{k=0}^{\infty} (r)^k$ \textit{\small converges to} $\frac{1}{1-r},$ $|r| < 1 $ \\[10pt] 
                 or \\[10pt]
-                $\displaystyle \sum_{k=N}^{\infty} r^N = \frac{r^N}{1-r}, $ $|r| < 1 $\\[10pt]
+                $\displaystyle \sum_{k=N}^{\infty} r^k$ \textit{\small converges to} $\frac{r^N}{1-r}, $ $|r| < 1 $\\[10pt]
+                \textit{Diverges if} $\left|r\right| \geq 1$\\ [10pt]
                 A series which increases by the same amount for each value of N. Ie. \\
                 $\frac{A_{n+1}}{A_n} = L$, where L is a number \\ 
-                Note: This does not converge for values of r greater than 1  \\
+                
             };
 
             %Integral Test
@@ -161,12 +164,13 @@
             };
 
             %Generalized NTTFDO
-            \node[shape = rectangle, draw=black, align=center, anchor=south, rounded corners, inner sep=12pt] (GenNTTFDOTest) at (-14,3){\huge \textbf{Generalized Nth Term Test} \\ [10pt]
+
+            \node[shape = rectangle, draw=black, align=center, anchor=south, rounded corners, inner sep=12pt] (GenNTTFDOTest) at (-18.5,3){
+            \huge \textbf{Gen. NTTFDO}\\ 
             \textbf{If condition (II) fails...}\\ [6pt]
-            If $\lim_{n \rightarrow \infty} \abs$
-
-
-            % };
+            If $\lim_{n \rightarrow \infty} \left|a_n \right| \neq 0$ \\
+            then $\sum a_n$ diverges 
+            };
 
             %p-series test
             \node[shape = rectangle, draw=black, align=center, rounded corners, inner sep=12pt, anchor=south] (PSes) at (-18,-6){\huge \textbf{P-Series Test}\\ [10pt]
@@ -177,8 +181,8 @@
             \end{cases}$ \\ [10pt]
             
             \textit{By the integral test} 
+            
             };
-
 
 
 
@@ -195,6 +199,9 @@
                 \path [-] (CompT) edge node[left] {$$} (ABSConvg);
                     \path [-] (ABSConvg) edge node[left] {$$} (RatioTest); 
                     \path [-] (ABSConvg) edge node[left] {$$} (RootTest); 
+            \path [-] (CorD) edge node[left] {$$} (AltSerTest);
+                \path [-] (AltSerTest) edge node[left] {$$} (GenNTTFDOTest);
+
 
 
 

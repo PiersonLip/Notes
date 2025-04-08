@@ -8,6 +8,8 @@
 
 \usepackage{amsmath}
 
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+
 \sloppy
 % \enabledarkmode
 
@@ -136,7 +138,7 @@
             };
 
             %Integral Test
-            \node[shape = rectangle, draw=black, align=center, anchor=south, rounded corners, inner sep=12pt] (IntTest) at (-12,-5){\huge \textbf{Integral Test} \\ [10pt]
+            \node[shape = rectangle, draw=black, align=center, anchor=south, rounded corners, inner sep=12pt] (IntTest) at (-10,-6){\huge \textbf{Integral Test} \\ [10pt]
             $\displaystyle \sum_{n=1}^{\infty} a_n$ converges if and only if $\int_1^\infty f(x) \, dx$ converges. \\ [8pt]
             and \\ [8pt]
             $\displaystyle \sum_{n=1}^{\infty} a_n$ diverges if and only if $\int_1^\infty f(x) \, dx$ diverges. \\ [15pt]
@@ -146,10 +148,28 @@
             II) Must be positive\\
             III) Must be decreasing \\ 
 
+            
             };
 
+            %Alternating Series Test
+            \node[shape = rectangle, draw=black, align=center, anchor=south, rounded corners, inner sep=12pt] (AltSerTest) at (-10,3){\huge \textbf{Alternating Series Test} \\ [10pt]
+            Suppose $\displaystyle \sum_{n=1}^{\infty} (-1)^n a_n$ is an alternating series with\\ [6pt]
+            I) $a_n$ must is eventually non-increasing\\
+            II) $a_n$ must goes to zero\\ [6pt]
+            Hence, $a_n$ must converge
+
+            };
+
+            %Generalized NTTFDO
+            \node[shape = rectangle, draw=black, align=center, anchor=south, rounded corners, inner sep=12pt] (GenNTTFDOTest) at (-14,3){\huge \textbf{Generalized Nth Term Test} \\ [10pt]
+            \textbf{If condition (II) fails...}\\ [6pt]
+            If $\lim_{n \rightarrow \infty} \abs$
+
+
+            % };
+
             %p-series test
-            \node[shape = rectangle, draw=black, align=center, rounded corners, inner sep=12pt] (PSes) at (-12,5){\huge \textbf{P-Series Test}\\ [10pt]
+            \node[shape = rectangle, draw=black, align=center, rounded corners, inner sep=12pt, anchor=south] (PSes) at (-18,-6){\huge \textbf{P-Series Test}\\ [10pt]
             
             $\displaystyle \sum_{n=1}^{\infty} \frac{1}{x^p} \begin{cases} 
             Converge & x\leq 1 \\
@@ -197,7 +217,7 @@
         \begingroup
         \centering
         Suppose that $\displaystyle \sum_{n=1}^{\infty} a_n$ is \textit{\textbf{any}} series,\\
-        and that\\[5pt]
+        and that\\[5pt]\textbf{}
         $\displaystyle \lim_{n \rightarrow \infty} \left| \frac{a_{n+1}}{a_n} \right| = r$\\[10pt]
         Then: \\[5pt]
         The series converges absolutely if $r < 1$\\

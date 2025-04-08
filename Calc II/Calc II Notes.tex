@@ -9,6 +9,7 @@
 
 \usepackage{amsmath}
 
+\usetikzlibrary{calc}
 % \newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
 
 \sloppy
@@ -37,40 +38,45 @@
 \endgroup
 \vspace*{\fill}
 
-\pagebreak
-
+\newgeometry{left=0.25in, right=0.25in, top=0.5in, bottom=0.5in}
 \vspace*{\fill}
 \begingroup
-
-    \resizebox{\textwidth}{!}{%
-
+\noindent
+    \resizebox{\dimexpr\paperwidth-5em}{!}{%
         \centering
         \begin{tikzpicture}
+
+            \tikzstyle{box} = [shape=rectangle, draw=black, align=center, rounded corners, inner sep=12pt, font =\large] 
 
             %titles and jazz
 
             %main
-            \node[shape=rectangle, draw=black, align=center, rounded corners, inner sep=12pt] (Main) at (0,0) {
+            \node[box] (Main) at (0,0) {
                 \huge $\displaystyle \sum_{n=1}^{\infty} a_n = \lim_{a \rightarrow \infty}\sum_{n=1}^{a} a_n$
             };
 
             %evalulate 
-            \node[shape=rectangle, draw=black, align=center, anchor=north, rounded corners, inner sep=12pt](EvalExc) at (0,-3) {\huge \textbf{Evaluate Exactly}};
+            \node[box](EvalExc) at (0,-4) {\huge \textbf{Evaluate Exactly}};
 
             %Converge or Diverge
-            \node[shape = rectangle, draw=black, align=center, anchor=south, rounded corners, inner sep=12pt] (CorD) at (0,3){\huge \textbf{Converge/Diverge}};
+            \node[box] (CorD) at (0,4){\huge \textbf{Converge/Diverge}};
             
             %NTTFDO
-            \node[shape = rectangle, draw=black, align=center, anchor=south, rounded corners, inner sep=12pt] (NTTFDO) at (12,1){\huge \textbf{$N^{th}$ test for divergnce (NTTFDO)} \\ [6pt] 
+            \node[box, anchor=south] (NTTFDO) at (12,1){\huge \textbf{$N^{th}$ test for divergnce (NTTFDO)} \\ [6pt] 
             $\lim_{n \rightarrow \infty} a_n \neq 0$ \\
             then the series must diverge
             };
             
             %Comp tests
-            \node[shape = rectangle, draw=black, align=center, anchor=south, rounded corners, inner sep=12pt] (CompT) at (0,7){\huge \textbf{Comparison Tests}};
+            \node[box] (CompT) at (0,8){\huge \textbf{Comparison Tests}};
 
+            %Absolute convergence 
+            \node[box] (ABSConvg) at (0,12){
+                {\huge \textbf{Absolute Convergence}}
+                };
+                            
             %limit comp text
-            \node[shape = rectangle, draw=black, align=center, anchor=north, rounded corners, inner sep=12pt] (LCT) at (-12,13){
+            \node[box, anchor=south] (LCT) at (-13,9){
                 {\huge \textbf{Limit Comparison Test}} \\[10pt]
                 $\lim_{ a = \infty} \frac{A_n}{B_n}$, Where $B_n$ is a series with known behavior\\ [10pt]
                 If $\lim_{ a = \infty} \frac{A_n}{B_n}\neq 0$, then $B_n$ and $A_n$ must either both converge or diverge\\
@@ -80,7 +86,7 @@
             };
 
             %direct comp text
-            \node[shape = rectangle, draw=black, align=center, anchor=north, rounded corners, inner sep=12pt] (DCT) at (12,10){
+            \node[box, anchor=north] (DCT) at (12,10){
                 {\huge \textbf{Direct Comparison Test}}\\[10pt]
                 If $B_n$ is a known series which converges and\\
                 $A_n \leq B_n$\\
@@ -91,13 +97,8 @@
                 then $A_n$ must also diverge
             };
 
-            %Absolute convergence 
-            \node[shape = rectangle, draw=black, align=center, anchor=south, rounded corners, inner sep=12pt] (ABSConvg) at (0,11){
-                {\huge \textbf{Absolute Convergence}}
-                };
-                
             %Ratio Test
-            \node[shape = rectangle, draw=black, align=center, anchor=south, rounded corners, inner sep=12pt] (RatioTest) at (0,15){
+            \node[box, anchor=south] (RatioTest) at (0,15){
                 {\huge \textbf{Ratio Test}}\\[10pt]
                 Suppose that $\displaystyle \sum_{n=1}^{\infty} a_n$ is \textit{\textbf{any}} series,\\
                 and that\\[5pt]
@@ -108,7 +109,7 @@
                 };
 
             %Root Test
-            \node[shape = rectangle, draw=black, align=center, anchor=south, rounded corners, inner sep=12pt] (RootTest) at (12,12){
+            \node[box, anchor=south] (RootTest) at (12,12){
                 {\huge \textbf{Root Test}}\\[10pt]
                 Suppose that $\displaystyle \sum_{n=1}^{\infty} a_n$ is \textit{any} series,\\
                 and that\\[5pt]
@@ -119,7 +120,7 @@
                 };
 
             %Telescoping
-            \node[shape=rectangle, draw=black, align=center, anchor=north, rounded corners, inner sep=12pt] (Tele) at (0,-7) {
+            \node[box, anchor=north] (Tele) at ($(EvalExc)+(0,-4)$) {
                 \textbf{\huge Telescoping Series} \\[10pt]
                 $\displaystyle \sum_{n=1}^{\infty} \frac{1}{n(n-1)}$ \\[10pt]
                 A series where intermediate terms cancel, leaving a finite sum \\[5pt]
@@ -129,7 +130,7 @@
             };
 
             %Geometric
-            \node[shape=rectangle, draw=black, align=center, anchor=south, rounded corners, inner sep=12pt] (Geom) at (12,-7.3) {
+            \node[box, anchor=south] (Geom) at (12,-7.3) {
                 \textbf{\huge Geometric Series} \\[10pt]
                 $\displaystyle \sum_{k=0}^{\infty} (r)^k$ \textit{\small converges to} $\frac{1}{1-r},$ $|r| < 1 $ \\[10pt] 
                 or \\[10pt]
@@ -141,7 +142,7 @@
             };
 
             %Integral Test
-            \node[shape = rectangle, draw=black, align=center, anchor=south, rounded corners, inner sep=12pt] (IntTest) at (-10,-6){\huge \textbf{Integral Test} \\ [10pt]
+            \node[box, anchor=south] (IntTest) at (-10,-6){\huge \textbf{Integral Test} \\ [10pt]
             $\displaystyle \sum_{n=1}^{\infty} a_n$ converges if and only if $\int_1^\infty f(x) \, dx$ converges. \\ [8pt]
             and \\ [8pt]
             $\displaystyle \sum_{n=1}^{\infty} a_n$ diverges if and only if $\int_1^\infty f(x) \, dx$ diverges. \\ [15pt]
@@ -155,7 +156,7 @@
             };
 
             %Alternating Series Test
-            \node[shape = rectangle, draw=black, align=center, anchor=south, rounded corners, inner sep=12pt] (AltSerTest) at (-10,3){\huge \textbf{Alternating Series Test} \\ [10pt]
+            \node[box, anchor=south] (AltSerTest) at (-10,3){\huge \textbf{Alternating Series Test} \\ [10pt]
             Suppose $\displaystyle \sum_{n=1}^{\infty} (-1)^n a_n$ is an alternating series with\\ [6pt]
             I) $a_n$ must is eventually non-increasing\\
             II) $a_n$ must goes to zero\\ [6pt]
@@ -165,7 +166,7 @@
 
             %Generalized NTTFDO
 
-            \node[shape = rectangle, draw=black, align=center, anchor=south, rounded corners, inner sep=12pt] (GenNTTFDOTest) at (-18.5,3){
+            \node[box, anchor=south] (GenNTTFDOTest) at (-18.5,3.7){
             \huge \textbf{Gen. NTTFDO}\\ 
             \textbf{If condition (II) fails...}\\ [6pt]
             If $\lim_{n \rightarrow \infty} \left|a_n \right| \neq 0$ \\
@@ -173,7 +174,7 @@
             };
 
             %p-series test
-            \node[shape = rectangle, draw=black, align=center, rounded corners, inner sep=12pt, anchor=south] (PSes) at (-18,-6){\huge \textbf{P-Series Test}\\ [10pt]
+            \node[box, anchor=south] (PSes) at (-18.5,-3.9){\huge \textbf{P-Series Test}\\ [10pt]
             
             $\displaystyle \sum_{n=1}^{\infty} \frac{1}{x^p} \begin{cases} 
             Converge & x\leq 1 \\
@@ -198,7 +199,7 @@
                 \path [-] (CompT) edge node[left] {$$} (DCT);
                 \path [-] (CompT) edge node[left] {$$} (ABSConvg);
                     \path [-] (ABSConvg) edge node[left] {$$} (RatioTest); 
-                    \path [-] (ABSConvg) edge node[left] {$$} (RootTest); 
+                    \path [-] (ABSConvg) edge node[left] {-|} (RootTest); 
             \path [-] (CorD) edge node[left] {$$} (AltSerTest);
                 \path [-] (AltSerTest) edge node[left] {$$} (GenNTTFDOTest);
 
@@ -210,7 +211,7 @@
 
 \endgroup
 \vspace*{\fill}
-
+\restoregeometry
 \pagebreak
 
 \section{\centering \huge Absolute Convergence \\ \fbox{10.5}}
@@ -236,7 +237,7 @@
         \begingroup
         \centering
 
-        \fbox{\large \textbf{ex. 1}}\\
+        \fbox{\large \textbf{example 1}}\\
 
         \hrulefill \\[10pt]
 
@@ -250,6 +251,28 @@
         $= \frac{(n+1)(n+1)(n)(n-1)}{(n-1)}$\\[15pt]
 
         $= {(n+1)(n+1)(n)}$\\[15pt]
+\pagebreak
+        \endgroup
+
+        \begingroup 
+        \centering
+        \fbox{\large \textbf{example 2}}\\
+        \hrulefill \\[10pt]
+
+        \textit{Problem 57 from book}\\ [15pt]
+        
+        \fbox{$\displaystyle \sum_{n=1}^{\infty} \frac{2^n(n!)^2}{2n!}$} \\ [10pt]
+        We apply the Ratio test \\ [15pt]
+
+        $\displaystyle \lim_{n \rightarrow \infty} \frac{\frac{(2^{n+1})(n+1)!^2}{2(n+1)!}}{\frac{2^nn!^2}{2n!}}$\\ [10pt]
+
+        $\displaystyle \lim_{n \rightarrow \infty} \frac{2^{n+1}(n+1)^2}{2(n+1)} \times \frac{2n!}{2n(n!)^2}$\\[10pt]
+
+        $\displaystyle \lim_{n \rightarrow \infty} \frac{2^{n+1}(n+1)^2}{\textbf{2n+2}}\times \frac{2n!}{2n(n!)^2}$,      {\tiny note the +2}\\[10pt]
+
+        $\displaystyle \lim_{n \rightarrow \infty} \frac{2(n+1)^2}{\textbf{(2n+2)(2n+1)}}$ \\ [10pt]
+        $= \frac{1}{2} < 1$\\ [15pt]
+        Hence, the series $\displaystyle \sum_{n=1}^{\infty} \frac{2^n(n!)^2}{2n!}$ converges\\
 
         \endgroup
     \pagebreak

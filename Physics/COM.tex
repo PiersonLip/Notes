@@ -3,11 +3,14 @@
 
 \usepackage{darkmode}
 \enabledarkmode 
+
 \usepackage{amsmath}
 \usepackage{tikz}
 \usepackage{framed}
 \usepackage{pgfplots}
 \usepackage{pgfplotstable}
+\usepackage{mdframed}
+
 \usetikzlibrary{3d, positioning}
 
 
@@ -75,13 +78,17 @@
 
             \begin{tikzpicture}
                 % Draw a horizontal reference line
-                \draw[thick] (-6,0) -- (6,0);
+                \draw[thick] (-6,-.2) -- (6,-.2);
                 
                 % Draw two squares, 10 units apart
                 
                 \draw[fill=gray!50] (-5,0) rectangle (-3,1); % First square
                 \draw[fill=gray!50] (3,0) rectangle (5,1);   % Second square
                 
+                \draw[fill=black] (-5,0) circle (.2);
+                \draw[fill=black] (-3,0) circle (.2);
+                \draw[fill=black] (3,0) circle (.2);
+                \draw[fill=black] (5,0) circle (.2);
                 % Labels
                 \node at (-4, -.5) {\small 
                 
@@ -169,7 +176,91 @@
     \end{list}
     \pagebreak
 
-    
+\subsection{\huge \centering Examples}
+\hrulefill
+\centering
+\subsubsection{\fbox{Example 1}}
+\hrulefill
+
+A 3kg cart is rolling along when a at 5m per sec a 2kg drops on tp of and sticks
+
+what is the final velocity 
+
+$p_i = m_1v_1 +m_2v_2$
+
+$=(3)(5)$
+
+$P_f = (m_1+ m_2) V_f$
+
+$\rightarrow$
+
+$V_f = 3m/s$//[20pt]
+
+\begin{tikzpicture}
+    \draw[fill = gray] (-1,-1) rectangle (1,1);
+\end{tikzpicture}
+
+\hrulefill
+\subsubsection{\fbox{Example 2}}
+\hrulefill \\[15pt]
+
+Train cars are coupled together by being bumped into each other. Supposed two loaded train cars are moving towards each there, first having a mass of $1.5 x 105kg$ and a velocity of $.3m/s \hat{i}$ and the second having a mass of $1.1x105kg$ and a velocity of $-.12m/s \hat{j}$\\[20pt]
+
+\textbf{\large Before}\\
+$P_i = m_1v_1 +m_2v_2$\\[15pt]
+
+\textbf{\large Bfter}\\
+$P_f = (m_1+ m_2) V_f$\\[15pt]
+
+$P_i = P_f$\\[15pt]
+
+$P_i = m_1v_1 +m_2v_2$ = $P_f = (m_1+ m_2) V_f$\\[15pt]
+
+$V_{cm} = \frac{v_1m_1+v_2m_2}{m_1 + m_2 }$\\[15pt]
+
+
+\hrulefill
+\subsubsection{\fbox{Example 3, Ballistic Pendulum $\star$}}
+\hrulefill \\[15pt]
+
+A projectile of mass $m$ moving horizontally with speed $v$ strikes a stationary mass $M$ suspended by strings of length $L$. Subsequently, $m+M$ rise to a height of $H$
+
+\textit{perfectly inelastic collision}\\[20pt]
+
+$P_i = P_f $\\[15pt]
+
+$Mv_i = (m+M)v_f$\\[15pt]
+
+$V_f = \frac{mv_i}{m+M}$\\[15pt]
+
+$(m+M)gH = \frac{1}{2}(m+M)v^2$\\[15pt]
+
+$H= \frac{v^2}{2g} - \frac{\frac{(mV)^2}{(m+M)^2}}{2g} = \frac{(m^2v^2)}{2((m+M)^2)g}$\\[15pt]
+
+\hrulefill\\[15pt]
+
+\begin{tikzpicture}
+
+    \draw[fill = gray, anchor = center ] (3,1) rectangle (0,-1);
+    \draw[fill = gray, anchor = center] (-3,0) circle (.5);
+    \draw[->, thick] (-1, 0) -- (1, 0.5);
+\end{tikzpicture}
+
+\pagebreak
+\hrulefill
+\subsubsection{\fbox{Example 4}}
+\hrulefill \\[15pt]
+
+The figure below (bullet hitting block) shows a bullet of mass 200g traveling towards the east with a speed of $400m/s$, which stirks a block of  mass 1.5kg that is intentionally at rest on a frictionless table \\[15pt]
+
+\begin{tikzpicture}
+    \draw[fill = gray, anchor = center ] (3,1) rectangle (0,-1);
+    \node at (1.5,1.5) {$v_b = 400m/s$};
+    \node at (1.5,-1.5) {$m_b = 1.5kg$};
+    \draw[fill = gray, anchor = center] (-3,0) circle (.5);
+    \node at (-3,-1) {$m_b = 1.5kg$};
+    \draw[->, thick] (-2, 0) -- (-.5, 0);
+\end{tikzpicture}
 
 
 \end{document}

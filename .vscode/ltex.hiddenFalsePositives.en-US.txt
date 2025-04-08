@@ -1,0 +1,1 @@
+{"rule":"ARTICLE_ADJECTIVE_OF","sentence":"^\\QA projective of mass m moving horizontally with speed v strikes a stationary mass M suspended by strings of length \\E(?:Dummy|Ina|Jimmy-|Dummy-|Maniquí-|Maniquíes-)[0-9]+\\Q.\\E$"}

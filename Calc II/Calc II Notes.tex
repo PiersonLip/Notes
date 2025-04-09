@@ -231,13 +231,33 @@
         The series converges absolutely if $r < 1$\\
         The series diverges if $r > 1$\\
         \endgroup
+    \subsubsection{"Keys"}
+        \hrulefill\\ [5pt]
+        \begingroup
+        \centering
+        \large
+        
+        $\displaystyle \frac{a^{n+1}}{a^n} = a$, ~~~~ $\displaystyle \frac{a^{n}}{a^{n+1}} = \frac{1}{a}$ \\ [15pt]
 
-    \subsubsection{Examples}
+
+
+        $\displaystyle \frac{(n+1)^{a}}{n^{a}} = \left(1+\frac{1}{n}\right)^a$ \\ [15pt]
+
+        $\displaystyle \frac{(n+1)!}{n!} = (n + 1) $\\ [15pt]
+
+        \textit{Note that these can be combined} \\ [5pt]
+        \fbox{Example}
+        $\frac{2^{n+1}(n+1)!}{2^n(n!)} = 2(n+1)$
+
+
+
+        \endgroup
+    \subsubsection{Examples}    
 
         \begingroup
         \centering
 
-        \fbox{\large \textbf{example 1}}\\
+        \fbox{\large \textbf{Example 1}}\\
 
         \hrulefill \\[10pt]
 
@@ -278,10 +298,74 @@
     \pagebreak
 
 
-
-\subsection{\centering \huge Misc}
+    \section{Alternating Series}
+    \hrulefill\\ [15pt]
+    \begingroup 
     \centering
-    \subsubsection{\huge Factorials}
+
+    Suppose $\displaystyle \sum_{n=1}^{\infty} (-1)^n a_n$ is an alternating series with\\ [6pt]
+                I) $a_n$ eventually non-increasing\\
+                II) $a_n$ going to zero\\ [6pt]
+                Then, $a_n$ must converge\\ [80pt]
+    \endgroup
+    
+    \begingroup
+    \centering
+    \resizebox{\dimexpr\textwidth-5em}{!}{%
+    \begin{tikzpicture}
+
+    \draw[thin] (0, 0) -- (2.7179, 0);
+
+    \foreach \i in {0, 1, 1.5, 1.8333, 2.0833, 2.2833, 2.4500, 2.5929, 2.7179}
+        \node[draw, circle, inner sep=1pt, fill=black] at (\i, 0) {};
+        
+ 
+    \foreach \A/\B in {0/1, 1/1.5, 1.5/1.8333, 1.8333/2.0833, 2.0833/2.2833, 2.2833/2.4500, 2.4500/2.5929, 2.5929/2.7179}
+        \draw (\A, 0) to[bend left=70] (\B, 0);
+        
+    \end{tikzpicture}
+    } \\ [20pt]
+
+
+    \resizebox{\dimexpr\textwidth-5em}{!}{%
+    \begingroup 
+    \centering
+    \begin{tikzpicture}
+
+    \draw[thin] (0, 0) -- (-4, 0);
+
+    \foreach \i in {0, -1.0, -0.5, -0.8333, -0.5833, -0.7833, -0.6167, -0.7595, -0.6345, -0.7456, -0.6456, -0.7365, -0.6532, -0.7301, -0.6587, -0.7254, -0.6629, -0.7217, -0.6661, -0.7188, -0.6688, -0.7164, -0.6709, -0.7144, -0.6727, -0.7127, -0.6743, -0.7113, -0.6756, -0.7101, -0.6768}
+        \node[draw, circle, inner sep=.5pt, fill=black] at (\i*4, 0) {};
+    
+    
+
+    \foreach \A/\B in {0/-1.0, -1.0/-0.5, -0.5/-0.8333, -0.8333/-0.5833, -0.5833/-0.7833, -0.7833/-0.6167, -0.6167/-0.7595, -0.7595/-0.6345, -0.6345/-0.7456, -0.7456/-0.6456, -0.6456/-0.7365, -0.7365/-0.6532, -0.6532/-0.7301, -0.7301/-0.6587, -0.6587/-0.7254, -0.7254/-0.6629, -0.6629/-0.7217, -0.7217/-0.6661, -0.6661/-0.7188, -0.7188/-0.6688, -0.6688/-0.7164, -0.7164/-0.6709, -0.6709/-0.7144, -0.7144/-0.6727, -0.6727/-0.7127, -0.7127/-0.6743, -0.6743/-0.7113, -0.7113/-0.6756, -0.6756/-0.7101, -0.7101/-0.6768}
+    \draw[thin] (\A*4, 0) to[bend left=90] (\B*4, 0);
+
+
+    \end{tikzpicture}
+    \endgroup
+    }
+    
+
+    \subsection{Examples}
+        \centering
+        \hrulefill \\ [15pt]
+        \fbox{Example 1}
+        $\displaystyle \sum_{n=1}^{\infty} \frac{(-1)^n}{n}$, Converge or diverge? \\ [15pt]
+
+        We apply the Alternating Series Test (AST) \\ [15pt]
+
+        $a_n = \frac{1}{n}$\\ [10pt]
+
+        1) $\frac{1}{n+1} < \frac{1}{n} \rightarrow Decreasing$\\ [8pt]
+        2) $\displaystyle \lim_{n \rightarrow \infty} a_n = \lim_{n \rightarrow \infty} \frac{1}{n} = 0$\\ [20pt]
+        Hence, by AST, the series converges \textbf{conditionally}
+
+\pagebreak
+\section{\centering \huge Misc}
+    \centering
+    \subsection{\huge Factorials}
     \fbox{\large ex.1}
 
         \hrulefill \\[10pt]
@@ -312,4 +396,6 @@
     $= \frac{(n+1)(n+1)(n)(n-1)}{(n-1)}$\\[15pt]
 
     $= {(n+1)(n+1)(n)}$\\[15pt]
+
+
 \end{document}

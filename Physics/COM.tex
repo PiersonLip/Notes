@@ -2,7 +2,7 @@
 \usepackage{graphicx} % Required for inserting images
 
 \usepackage{darkmode}
-\enabledarkmode 
+\enabledarkmode
 
 \usepackage{amsmath}
 \usepackage{tikz}
@@ -146,7 +146,16 @@
     
     \begin{center}
         \large
-        \fbox{$\vec{P_{total}} = M_{total}V_{cm}$}
+        \fbox{$\vec{P_{total}} = M_{total}V_{cm}$} \\ [15pt]
+
+        $P_i = P_f$\\[15pt]
+
+        $ {m_1v_1}_i +{m_2v_2}_i ={ m_1v_1}_f + {m_2v_2}_f $\\[15pt]
+
+        \fbox{Special Case Eqs}\\ [15pt]
+        $v_{1f} = \frac{v_{1f}(m_1-m_2)} {(m_1 + m_2)}$ \\ [15pt]
+
+        $v_{2f} = \frac{v_{1f}(2m)} {(m_1 + m_2)}$ \\ [15pt]
     \end{center}
 
     
@@ -174,8 +183,59 @@
         \item Friction is typically not considered 
         \item typically the system will have a net force
     \end{list}
-    \pagebreak
 
+    \subsection{Center of Mass Frame}
+    In center of mass frame, Velocity is equal to zero. \\ [20pt]
+
+    \begingroup 
+    \centering
+    \large
+    $V_{cm} = \frac{v_1m_1+v_2m_2}{m_1 + m_2 }$\\[15pt]
+    \endgroup
+
+    COM Ref frame will stay in the same spot before and after collision. 
+    Magnitude of initial v1 will be equal to v2f. \\
+
+    \begingroup 
+    \centering
+    \large
+    $|v_{1_i}| =|v_{1_f}|$ \\ [10pt]
+    $|v_{2_i}| =|v_{2_f}|$ \\ [20pt]
+    \endgroup
+
+
+    \begingroup
+    \centering
+        \begin{tikzpicture}
+            \draw[fill = gray] (-4,-1) rectangle (-2,1);
+            \draw[->, thick] (-1.8,0) -- (-.5, 0);
+            \draw[fill = gray] (0,0) circle (.2);
+            \node at (0,-.5) {$V_{com}$};
+            \draw[fill = gray] (4,-1) rectangle (2,1);
+            \draw[->, thick] (1.8,0) -- (.5, 0);
+        \end{tikzpicture} \\ [15pt]
+
+        \begin{tikzpicture}
+            \draw[fill = gray] (-3,-1) rectangle (-1,1);
+            \draw[->, thick] (-3.2,0) -- (-5, 0);
+            \draw[fill = gray] (0,0) circle (.2);
+            \node at (0,-.5) {$V_{com}$};
+            \draw[fill = gray] (3,-1) rectangle (1,1);
+            \draw[->, thick] (3.2,0) -- (5, 0);
+
+
+        \end{tikzpicture} \\ [15pt]
+    \endgroup
+
+    Thus, you can just convert to COM ref frame and then just  
+
+
+
+
+\pagebreak
+
+
+ 
 \subsection{\huge \centering Examples}
 \hrulefill
 \centering
@@ -194,10 +254,14 @@ $P_f = (m_1+ m_2) V_f$
 
 $\rightarrow$
 
-$V_f = 3m/s$//[20pt]
+$V_f = 3m/s$ \\[30pt]
 
 \begin{tikzpicture}
     \draw[fill = gray] (-1,-1) rectangle (1,1);
+    \draw[->, thick] (0, 1.8) -- (0, 1.2);
+    \draw[fill = gray] (-.5,2) rectangle (.5,2.5);
+    \draw[->, thick] (1.2, 0) -- (3, 0);
+    \node at (2, -.2) {5m/s};
 \end{tikzpicture}
 
 \hrulefill
@@ -209,7 +273,7 @@ Train cars are coupled together by being bumped into each other. Supposed two lo
 \textbf{\large Before}\\
 $P_i = m_1v_1 +m_2v_2$\\[15pt]
 
-\textbf{\large Bfter}\\
+\textbf{\large Ater}\\
 $P_f = (m_1+ m_2) V_f$\\[15pt]
 
 $P_i = P_f$\\[15pt]
@@ -243,7 +307,7 @@ $H= \frac{v^2}{2g} - \frac{\frac{(mV)^2}{(m+M)^2}}{2g} = \frac{(m^2v^2)}{2((m+M)
 
     \draw[fill = gray, anchor = center ] (3,1) rectangle (0,-1);
     \draw[fill = gray, anchor = center] (-3,0) circle (.5);
-    \draw[->, thick] (-1, 0) -- (1, 0.5);
+    \draw[->, thick] (-2, 0) -- (-.5, 0);
 \end{tikzpicture}
 
 \pagebreak
@@ -262,5 +326,20 @@ The figure below (bullet hitting block) shows a bullet of mass 200g traveling to
     \draw[->, thick] (-2, 0) -- (-.5, 0);
 \end{tikzpicture}
 
+\hrulefill
+\subsubsection{\fbox{Example 5}}
+\hrulefill \\[15pt]
+
+A glider of mass .02 kg slides on a frictionless track with initial velocity of 1.5 m/s. It hits a glider of mass .8kg moving to the left at v2i = .2m/s. A spring attached to the first glider compresses and relaxes during the collision, but this is no friction (energy is conserved). What are the final velocities. \\ [15pt]
+
+\fbox{\textit{Special Case Eqs}} \\ [10pt]
+
+$v_{1f} = \frac{v_{1f}(m_1-m_2)} {(m_1 + m_2)}$ \\ [15pt]
+
+$v_{2f} = \frac{v_{1f}(2m)} {(m_1 + m_2)}$ \\ [15pt]
+
+$v_{2f} = \frac{(1.5)(.4)} {(1)} = .6$\\ [15pt]
+
+$v_{1f} = \frac{(1.5)(-.6)} {(1)} = -.9kg$\\ [15pt]
 
 \end{document}

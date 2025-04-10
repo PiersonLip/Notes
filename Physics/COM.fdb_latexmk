@@ -1,8 +1,8 @@
 # Fdb version 4
-["pdflatex"] 1744134050.30141 "c:/Users/iatpuser/Desktop/school stuff/notes/Notes/Physics/COM.tex" "COM.pdf" "COM" 1744134057.93165 0
-  "COM.aux" 1744134057 1885 223019fea990e1d5dfd55374f06339a1 "pdflatex"
-  "COM.tex" 1744132663 8136 2036b87c8fdb0bf9f690ca088d2b7063 ""
-  "c:/Users/iatpuser/Desktop/school stuff/notes/Notes/Physics/COM.tex" 1744132663 8136 2036b87c8fdb0bf9f690ca088d2b7063 ""
+["pdflatex"] 1744244802.25623 "c:/Users/iatpuser/Desktop/school stuff/notes/Notes/Physics/COM.tex" "COM.pdf" "COM" 1744244804.18131 0
+  "COM.aux" 1744244804 2114 8112425faa2520e24e509a4e9c44ee8e "pdflatex"
+  "COM.tex" 1744244801 10638 28eb83c6ebc2364421655ff3267cde80 ""
+  "c:/Users/iatpuser/Desktop/school stuff/notes/Notes/Physics/COM.tex" 1744244801 10638 28eb83c6ebc2364421655ff3267cde80 ""
   "c:/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1742691463 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1742689338 1004 54797486969f23fa377b128694d548df ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1742689338 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -30,6 +30,7 @@
   "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1742689338 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1742689338 36741 0ee9e374ec3e30da87cdfb0ea3575226 ""
   "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb" 1742689338 37912 07513ec114ac737ab54cea0152f4424b ""
+  "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb" 1742689338 37166 8ab3487cbe3ab49ebce74c29ea2418db ""
   "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1742689338 36281 c355509802a035cadc5f15869451dcee ""
   "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1742689338 35469 dcf3a5f2fc1862f5952e3ee5eb1d98c4 ""
   "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb" 1742689338 36094 798f80770b3b148ceedd006d487db67c ""
@@ -42,6 +43,8 @@
   "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1742689338 32726 39f0f9e62e84beb801509898a605dbd5 ""
   "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb" 1742689338 33993 9b89b85fd2d9df0482bd47194d1d3bf3 ""
   "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1742689338 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1742689338 32716 08e384dc442464e7285e891af9f45947 ""
+  "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1742689338 32626 5abc8bb2f28aa647d4c70f8ea38cc0d3 ""
   "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb" 1742689338 32442 c975af247b6702f7ca0c299af3616b80 ""
   "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1742689338 37944 359e864bd06cde3b1cf57bb20757fb06 ""
   "c:/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1742693605 71627 94eb9990bed73c364d7f53f960cc8c5b ""

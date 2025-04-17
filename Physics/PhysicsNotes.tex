@@ -10,6 +10,9 @@
 \usepackage{pgfplots}
 \usepackage{pgfplotstable}
 \usepackage{mdframed}
+\usepackage{textcomp}
+\usepackage{ulem}
+\usepackage{cancel}
 
 \usetikzlibrary{3d, positioning}
 
@@ -342,5 +345,155 @@ $v_{2f} = \frac{v_{1f}(2m)} {(m_1 + m_2)}$ \\ [15pt]
 $v_{2f} = \frac{(1.5)(.4)} {(1)} = .6$\\ [15pt]
 
 $v_{1f} = \frac{(1.5)(-.6)} {(1)} = -.9kg$\\ [15pt]
+
+\pagebreak
+\subsection{\huge Moment of inertia}
+    \hrulefill \\
+    $I = I_c + MD^2$ \\
+    $x \rightarrow \theta$ \\
+    $dx/dt = v \rightarrow d\theta/dt = \omega$ \\
+    $m = I$ \\
+    \hrulefill
+        
+
+    \subsubsection{\large \centering Examples}
+    \hrulefill
+    \centering
+    \subsubsection{\fbox{Example 1}}
+        What is the moment of inertia of two solid spheres with radius r = 10cm and mass 10kg. Attached to a rod of mass 2kg and length of d = 25cm
+        \\ [15pt]
+        $I_{system} = I_{sphere} + I_{sphere_2} + I_{rod}$ v \\[10pt]
+        $= 2(i_{sphere_cm} + MD^2) + I_{rod_{cm}}$   \\[10pt]
+        $ = 2(\frac{2}{5}MR^2 + M(R+\frac{d}{2})^2 + \frac{1}{12}md^2)$ \\ [10pt]
+        $=2(\frac{2}{5})(10)(.1)^(.1) + (10)(.225)^2 + \frac{1}{12}(2)(.25)^2$ \\ [10pt]
+        $I_{system} = 1.103kgm^2$ \\ [20pt]
+
+        \begin{tikzpicture}
+            \draw[-, thick] (-2, 0) -- (2,0);
+            \draw[dotted, thick] (0, -2) -- (0,2);
+            \draw[fill = gray, anchor = center] (-2,0) circle (.5);
+            \draw[fill = gray, anchor = center] (2,0) circle (.5);
+            \node at (0, -2.5) {Axis of rotation};
+            \node at (0, -.3) {25cm};
+            \node at (-2, 0) {2kg};
+            \node at (2, 0) {2kg};
+        \end{tikzpicture}
+
+    \hrulefill
+    \subsubsection{\huge Torque}
+        $|\tau| = |r| |F| \sin{\theta}$ \\
+        $\vec{\tau} = \vec{r}X\vec{F}$ \\ 
+        $W = \vec{\tau}\Delta\vec{\theta}$ \\
+
+        $KE_{total} = KE_{tras} + KE_{rot}$ \\
+         $=1/2mv^2_{com} +1/2I_{com}W^2$\\
+
+        \textbf{Kinematic equations }
+        \begin{align}
+            \omega &= \omega_0 + \alpha t \\
+            \theta &= \omega_0 t + \frac{1}{2} \alpha t^2 \\
+            \omega^2 &= \omega_0^2 + 2\alpha \theta \\
+            \theta &= \frac{1}{2} (\omega + \omega_0) t \\
+            \theta &= \omega t - \frac{1}{2} \alpha t^2
+            \end{align}
+            
+    \hrulefill
+
+    \subsection{\large \centering Examples}
+    \hrulefill
+    \centering
+    \subsubsection{\fbox{Example 1}}   
+        A 50n force is placed on one end of a 25cm long wrench as shown. what is the torque applied by this force if it rotates about the other end? \\ [20pt]
+
+        \begingroup
+        \centering
+
+        $\tau = (.25m)(50n)(\sin120)$ \\[10pt]
+
+        \begin{tikzpicture}
+            \draw[->, thick] (0, 0) -- (2,1.333);
+            \node at (.75,.2) {30\textdegree};
+            \node at (.3,1) {25cm};
+            \draw[dotted, thick] (0, 0) -- (3,0);
+            \draw[dotted, thick] (2, 1.333) -- (2,0-2);
+            \node at (2,0-2.3) {axis of mass};
+            \node at (2.9, 1.333) {F = 50N};
+            \draw[->, dotted, thick] (0, 0) -- (0,-2);
+            \node at (0,-2.2) {$F_g$};
+        \end{tikzpicture}
+        \endgroup
+
+        \hrulefill
+
+        \subsubsection{\fbox{Example 2}}
+            A long length of string is wrapped around 5kg drum with a radius of 30cm. The drum is free to spin around a frictionless axle. The other end of the string is attached to a 10kg mass. If the mass is allowed to drop, what is the acceleration?
+
+            $a_t = R \alpha \rightarrow \alpha = \frac{a}{r}$\\ [10pt]
+            $I_{soliddisk} = \frac{1}{2} M_1R^2$ \\ [10pt]
+            $\sum F = M_2a$  \\ [10pt]
+            $M_2g - T = M_2a$\\[10pt]
+            $T = m_2g = m_2a$ \\[10pt]
+            \hrulefill \\[10pt]
+            $\sum\tau = I \alpha$\\[10pt]
+            $\cancel{\tau_{fg}} + \cancel{\tau_{Fs}} + \tau_T = \frac{1}{2} M_1R^2\frac{a}{R}$ \\ [10pt]
+            $T\cancel{R} = \frac{1}{2} M_1\cancel{R}^2\frac{a}{\cancel{R}}$\\[10pt]
+            $T = \frac{1}{2} m_1a$ \\[20pt]
+            \hrulefill \\[10pt]
+            $\frac{1}{2} m_1a = m_2g = m_2a $ \\ [15pt]
+
+            $a = \frac{M_2g}{\frac{1}{2}M_1 +M_2}$ \\[20pt]
+
+
+
+
+            \begin{tikzpicture}
+                \draw[fill = gray, anchor = center] (0,0) circle (1);
+                \node at (0,0) {5kg};
+                \draw[-, thick] (1,0) -- (1,-2);
+                \draw[fill = gray, anchor = center] (.5,-2) rectangle (1.5, -2.5);
+                \node at (1,-2.25) {5kg};
+
+            \end{tikzpicture}\\ [15pt]
+        \hrulefill
+        \subsubsection{\fbox{Example 3}}
+        \hrulefill
+        A long length of string is wrapped around a 5kg drum with a radius of 30cm. The drum is free to spin around a frictionless axle. After the string has been pulled with a 10n force for a distance of 5m. What is the angular velocity of the drum.
+
+        $W_{net} = \Delta~KE$ \\ [10pt]
+
+        $F \times d = RKEf - \cancel{Rkei} $\\ [10pt]
+        $F \times d= \frac{1}{2} IW_f^2$ \\ [10pt]
+
+        $I = \frac{1}{2}MR^2 = \frac{1}{2} (5kg)(.3m)^2$ \\ [10pt]
+        $I = .225Kgm^2$ \\ [10pt]
+
+        $(10N)(5m) = \frac{1}{2}(.225kgm^2)W_f^2$ \\ [10pt]
+        $W_f = 21.1 \frac{Rad}{S}$
+
+        \hrulefill
+        \subsubsection{\fbox{Example 4}}
+        \hrulefill \\
+            A length of string is wrapped around a 5kg drum with a radius of 30cm. The drum is free to spin around a frictionless axle. The other end of the string is attached to a 10kg mass. What is the angular velocity of the pully after the mass has dropped 2m? \\
+            [15pt]
+        \begin{tikzpicture}
+            \draw[fill = gray, anchor = center] (0,0) circle (1);
+            \node at (0,0) {5kg};
+            \draw[-, thick] (1,0) -- (1,-2);
+            \draw[fill = gray, anchor = center] (.5,-2) rectangle (1.5, -2.5);
+            \node at (1,-2.25) {5kg};
+
+        \end{tikzpicture}\\ [15pt]
+
+        $W_f^2 = \cancel{W_0^2} +2\alpha~\Delta~\theta$ \\[10pt]
+        $W_f = \sqrt{2(26.1\frac{rad}{s^2}(6.66rad))}$ \\[15pt]
+        $W_f = 18.6 \frac{rad}{s}$ \\
+
+        $rev = 2\pi~R$ \\ [15pt]
+        $= 2\pi~(.3)$ \\ [10pt]
+        $=.6\pi\omega$ \\[10pt]
+        $=2.0\omega$ \\[10pt]
+            
+
+
 
 \end{document}
